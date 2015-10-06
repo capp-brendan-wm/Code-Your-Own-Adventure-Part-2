@@ -55,7 +55,7 @@ var raceRole = function(role2) {
     }
     else if (role2 === "Elf") {
         alert("You have chosen the Elf race.");
-        alert("You will start in the city of Yggdrasil");
+        alert("You will start in the city of Yggdrasil.");
     }
     else if (role2 === "Undead") {
         alert("You have chosen the Undead race.");
@@ -80,10 +80,134 @@ var godChoice = function(role3) {
         alert("You will head down a neutral path to choose between good or evil.");
     }
     else if (role3 === "Rodcet Nife") {
-        alert("You have chose the God of Tranquility, Rodcet Nife.");
+        alert("You have chosen the God of Tranquility, Rodcet Nife.");
         alert("You will head down a path of bliss and serenity.");
     }
 };
 godChoice(prompt("You now have the choice to choose a God to lead you down the path you desire to use your power for. Your choices are Rallos Zek(Evil), Solusek Ro(Neutral), or Rodcet Nife(Good)."));
 
+sleep(5000);
 
+var storyStart = function(role4) {
+    if (role4 === "Archer") {
+        alert("You encounter a wolf.");
+        var slaying = true;
+        var youHit = Math.floor(Math.random() * 2);
+        var damageThisRound = Math.floor(Math.random() * 5 + 1);
+        var totalDamage = 0;
+
+        while (slaying) {
+            if (youHit) {
+                alert("You hit the wolf and did " + damageThisRound + " damage!");
+                totalDamage += damageThisRound;
+
+                if (totalDamage >= 4) {
+                    alert("You did it! You killed the wolf!");
+                    slaying = false;
+                } else {
+                    youHit = Math.floor(Math.random() * 2);
+                }
+            } else {
+                alert("The wolf eats your body as you bleed out.");
+                slaying = false;
+            }
+        }
+    }
+    else if(role4 === "Warrior") {
+        alert("You encounter a boar.");
+        var killing = true;
+        var youAttack = Math.floor(Math.random() * 2);
+        var damageThisTime = Math.floor(Math.random() * 5 + 1);
+        var totalInfliction = 0;
+
+        while (killing) {
+            if (youAttack) {
+                alert("You hit the boar and did " + damageThisTime + " damage!");
+                totalInfliction += damageThisTime;
+
+                if (totalInfliction >= 4) {
+                    alert("You did it! You killed the boar!");
+                    killing = false;
+                } else {
+                    youAttack = Math.floor(Math.random() * 2);
+                }
+            } else {
+                alert("The boar gnashes your body till you die.");
+                killing = false;
+            }
+        }
+    }
+    else if(role4 === "Rogue") {
+        alert("You encounter a boar.");
+        var derping = true;
+        var youBeat = Math.floor(Math.random() * 2);
+        var damageMerpTime = Math.floor(Math.random() * 5 + 1);
+        var totalDerp = 0;
+
+        while (derping) {
+            if (youBeat) {
+                alert("You hit the boar and did " + damageMerpTime + " damage!");
+                totalDerp += damageMerpTime;
+
+                if (totalDerp >= 4) {
+                    alert("You did it! You killed the boar!");
+                    derping = false;
+                } else {
+                    youBeat = Math.floor(Math.random() * 2);
+                }
+            } else {
+                alert("The boar gnashes your body till you die.");
+                derping = false;
+            }
+        }
+    }
+    else if(role4 === "Mage") {
+        alert("You encounter a boar.");
+        var murder = true;
+        var youDestroy = Math.floor(Math.random() * 2);
+        var damageRightNow = Math.floor(Math.random() * 5 + 1);
+        var totalConflict = 0;
+
+        while (murder) {
+            if (youDestroy) {
+                alert("You hit the boar and did " + damageRightNow + " damage!");
+                totalConflict += damageRightNow;
+
+                if (totalConflict >= 4) {
+                    alert("You did it! You killed the boar!");
+                    murder = false;
+                } else {
+                    youDestroy = Math.floor(Math.random() * 2);
+                }
+            } else {
+                alert("The boar gnashes your body till you die.");
+                murder = false;
+            }
+        }
+    }
+    else if(role4 === "Priest") {
+        alert("You encounter a boar.");
+        var sicking = true;
+        var youLying = Math.floor(Math.random() * 2);
+        var damageAroundThis = Math.floor(Math.random() * 5 + 1);
+        var totalMerp = 0;
+
+        while (sicking) {
+            if (youLying) {
+                alert("You hit the boar and did " + damageAroundThis + " damage!");
+                totalMerp += damageAroundThis;
+
+                if (totalMerp >= 4) {
+                    alert("You did it! You killed the boar!");
+                    sicking = false;
+                } else {
+                    youLying = Math.floor(Math.random() * 2);
+                }
+            } else {
+                alert("The boar gnashes your body till you die.");
+                sicking = false;
+            }
+        }
+    }
+    storyStart(prompt("Please restate the class you chose."));
+};
